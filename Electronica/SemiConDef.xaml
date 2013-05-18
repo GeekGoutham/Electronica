@@ -1,0 +1,123 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Electronica.SemiConDef"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+            <toolkit:NavigationInTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardIn" />
+            </toolkit:NavigationInTransition.Backward>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardIn" />
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardOut" />
+            </toolkit:NavigationOutTransition.Backward>
+            <toolkit:NavigationOutTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardOut" />
+            </toolkit:NavigationOutTransition.Forward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="Electronica" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="SC Devices" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+        	<ScrollViewer HorizontalAlignment="Left" Height="607" VerticalAlignment="Top" Width="456">
+        		<RichTextBox HorizontalAlignment="Left" Height="2456" VerticalAlignment="Top" Width="446" TextAlignment="Justify">
+        			<Paragraph>
+        				<Run Text="     "/>
+        				<Run Text="Semiconductor devices are electronic components that exploit the electronic properties of semiconductor materials, principally silicon, germanium, and gallium arsenide, as well as organic semiconductors. Semiconductor devices have replaced thermionic devices (vacuum tubes) in most applications. They use electronic conduction in the solid state as opposed to the gaseous state or thermionic emission in a high vacuum."/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run Text="     "/>
+        				<Run Text="Semiconductor devices are manufactured both as single discrete devices and as integrated circuits (ICs), which consist of a number—from a few (as low as two) to billions—of devices manufactured and interconnected on a single semiconductor substrate, or wafer."/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run Text="  "/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run Text="      "/>
+        				<Run Text="S"/>
+        				<Run Text="e"/>
+        				<Run Text="miconductor materials are so useful because their behavior can be easily manipulated by the addition of impurities, known as doping. Semiconductor conductivity can be controlled by introduction of an electric or magnetic field, by exposure to light or heat, or by mechanical deformation of a doped monocrystalline grid; thus, semiconductors can make excellent sensors. Current conduction in a semiconductor occurs via mobile or &quot;free&quot; electrons and holes, collectively known as charge carriers. Doping a semiconductor such as silicon with a small amount of impurity atoms, such as phosphorus or boron, greatly increases the number of free electrons or holes within the semiconductor. When a doped semiconductor contains excess holes it is called &quot;p-type&quot;, and when it contains excess free electrons it is known as &quot;n-type&quot;, where p (positive for holes) or n (negative for electrons) is the sign of the charge of the majority mobile charge carriers. The semiconductor material used in devices is doped under highly controlled conditions in a fabrication facility, or fab, to precisely control the location and concentration of p- and n-type dopants. The junctions which form where n-type and p-type semiconductors join together are called p–n junctions."/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run Text="Diode"/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run Text="     "/>
+        				<Run Text="The diode is a device made from a single p–n junction. At the junction of a p-type and an n-type semiconductor there forms a region called the depletion zone which blocks current conduction from the n-type region to the p-type region, but allows current to conduct from the p-type region to the n-type region. Thus, when the device is forward biased, with the p-side at higher electric potential, the diode conducts current easily; but the current is very small when the diode is reverse biased."/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run Text="     "/>
+        				<Run Text="Exposing a semiconductor to light can generate electron–hole pairs, which increases the number of free carriers and its conductivity. Diodes optimized to take advantage of this phenomenon are known as photodiodes. Compound semiconductor diodes can also be used to generate light, as in light-emitting diodes and laser diodes."/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run Text="Transistor"/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run Text="  "/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run Text="     "/>
+        				<Run Text="Bipolar junction transistors are formed from two p–n junctions, in either n–p–n or p–n–p configuration. The middle, or base, region between the junctions is typically very narrow. The other regions, and their associated terminals, are known as the emitter and the collector. A small current injected through the junction between the base and the emitter changes the properties of the base-collector junction so that it can conduct current even though it is reverse biased. This creates a much larger current between the collector and emitter, controlled by the base-emitter current."/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run Text="     "/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run/>
+        			</Paragraph>
+        		</RichTextBox>
+        	</ScrollViewer>
+
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

@@ -1,0 +1,78 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Electronica.ChargeDef"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+            <toolkit:NavigationInTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardIn" />
+            </toolkit:NavigationInTransition.Backward>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardIn" />
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardOut" />
+            </toolkit:NavigationOutTransition.Backward>
+            <toolkit:NavigationOutTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardOut" />
+            </toolkit:NavigationOutTransition.Forward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="Electronica" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="Charge" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+        	<ScrollViewer HorizontalAlignment="Left" Height="607" VerticalAlignment="Top" Width="456">
+        		<RichTextBox HorizontalAlignment="Left" Height="1249" VerticalAlignment="Top" Width="446" TextAlignment="Justify">
+        			<Paragraph>
+        				<Run Text="          "/>
+        				<Run Text="Electric charge is a physical property of matter that causes it to experience a force when near other electrically charged matter. There exist two types of electric charges, called positive and negative. Positively charged substances are repelled from other positively charged substances, but attracted to negatively charged substances; negatively charged substances are repelled from negative and attracted to positive. An object will be negatively charged if it has an excess of electrons, and will otherwise be positively charged or uncharged. The SI unit of electric charge is the coulomb (C), although in electrical engineering it is also common to use the ampere-hour (Ah), and in chemistry it is common to use the elementary charge (e) as a unit. The symbol Q is often used to denote a charge. The study of how charged substances interact is classical electrodynamics, which is accurate insofar as quantum effects can be ignored."/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run Text="           "/>
+        				<Run Text="The electric charge is a fundamental conserved property of some subatomic particles, which determines their electromagnetic interaction. Electrically charged matter is influenced by, and produces, electromagnetic fields. The interaction between a moving charge and an electromagnetic field is the source of the electromagnetic force, which is one of the four fundamental forces (See also: magnetic field)."/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run Text="          "/>
+        				<Run Text="Twentieth-century experiments demonstrated that electric charge is quantized; that is, it comes in integer multiples of individual small units called the elementary charge, e, approximately equal to 1.602×10−19 coulombs (except for particles called quarks, which have charges that are integer multiples of e/3). The proton has a charge of e, and the electron has a charge of −e. The study of charged particles, and how their interactions are mediated by photons, is quantum electrodynamics."/>
+        			</Paragraph>
+        		</RichTextBox>
+        	</ScrollViewer>
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

@@ -1,0 +1,74 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Electronica.Capacitive_Reactance"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+	<phone:PhoneApplicationPage.ApplicationBar>
+		<shell:ApplicationBar>
+			<shell:ApplicationBarIconButton IconUri="/Assets/AppBar/appbar.baseF.rest.png" IsEnabled="True" Text="Frequency" Click="CalFreq"/>
+			<shell:ApplicationBarIconButton IconUri="/Assets/AppBar/appbar.baseC.rest.png" IsEnabled="True" Text="Capacitance" Click="CalCapacitance"/>
+			<shell:ApplicationBarIconButton IconUri="/Assets/AppBar/appbar.baseXC.rest.png" IsEnabled="True" Text="Reactance" Click="CalReactance"/>
+		</shell:ApplicationBar>
+	</phone:PhoneApplicationPage.ApplicationBar>
+
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+            <toolkit:NavigationInTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardIn" />
+            </toolkit:NavigationInTransition.Backward>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardIn" />
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardOut" />
+            </toolkit:NavigationOutTransition.Backward>
+            <toolkit:NavigationOutTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardOut" />
+            </toolkit:NavigationOutTransition.Forward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="Electronica Calculators" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="Capactive " Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+        	<Image Margin="47,266,44,29" Source="CapacitiveImage.png" Stretch="Fill"/>
+        	<TextBlock HorizontalAlignment="Left" Height="49" Margin="25,40,0,0" TextWrapping="Wrap" Text="Frequency" VerticalAlignment="Top" Width="167" FontSize="26.667"/>
+        	<TextBlock HorizontalAlignment="Left" Height="49" Margin="25,113,0,0" TextWrapping="Wrap" Text="Capacitance" VerticalAlignment="Top" Width="167" FontSize="26.667"/>
+        	<TextBlock HorizontalAlignment="Left" Height="49" Margin="25,184,0,0" TextWrapping="Wrap" Text="Reactance" VerticalAlignment="Top" Width="167" FontSize="26.667"/>
+        	<TextBox x:Name="freqText" HorizontalAlignment="Left" Height="67" Margin="231,28,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" InputScope="Number"/>
+        	<TextBox x:Name="capText" HorizontalAlignment="Left" Height="67" Margin="231,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" InputScope="Number"/>
+        	<TextBox x:Name="reacText" HorizontalAlignment="Left" Height="67" Margin="231,173,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="172" InputScope="Number"/>
+        	<TextBlock HorizontalAlignment="Left" Height="52" Margin="404,43,0,0" TextWrapping="Wrap" Text="Hz" VerticalAlignment="Top" Width="42" FontSize="26.667"/>
+        	<TextBlock HorizontalAlignment="Left" Height="52" Margin="403,110,0,0" TextWrapping="Wrap" Text="F" VerticalAlignment="Top" Width="42" FontSize="26.667"/>
+        	<TextBlock HorizontalAlignment="Left" Height="52" Margin="403,188,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="42" FontSize="26.667" Text="Ω"/>
+
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

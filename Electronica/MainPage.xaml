@@ -1,0 +1,138 @@
+﻿<phone:PhoneApplicationPage
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    xmlns:local="clr-namespace:Electronica" 
+    x:Class="Electronica.MainPage" 
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="800" 
+    d:DataContext="{d:DesignData SampleData/MainViewModelSampleData.xaml}"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="False">
+
+
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+            <toolkit:NavigationInTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardIn" />
+            </toolkit:NavigationInTransition.Backward>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardIn" />
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardOut" />
+            </toolkit:NavigationOutTransition.Backward>
+            <toolkit:NavigationOutTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardOut" />
+            </toolkit:NavigationOutTransition.Forward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
+    
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+ 
+        <!--Panorama control-->
+        <controls:Panorama Title="Electronica" Loaded="ApplicationStarted">
+            <controls:Panorama.Background>
+                <ImageBrush ImageSource="PanoramaBackground.png"/>
+            </controls:Panorama.Background>
+ 
+            <!--Panorama item one-->
+            <controls:PanoramaItem Header="Basics">
+                <!--Double line list with text wrapping-->
+            	<ListBox Margin="0,0,-12,0">
+            		<ListBox.ItemTemplate>
+            			<DataTemplate>
+            				<StackPanel Margin="0,0,0,17" Width="432" Height="78">
+            					<TextBlock Text="{Binding LineOne}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
+            					<TextBlock Text="{Binding LineTwo}" TextWrapping="Wrap" Margin="12,-6,12,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+            				</StackPanel>
+            			</DataTemplate>
+            		</ListBox.ItemTemplate>
+            		<ListBoxItem x:Name="charge_list" Content="  Charge" Height="45" FontSize="32" Tap="LoadChargeDef"/>
+            		<ListBoxItem Content="  Voltage" Height="45" FontSize="32" Tap="VoltDefNav"/>
+            		<ListBoxItem Content="  Current" Height="45" FontSize="32" Tap="CurrentDefNAv"/>
+            		<ListBoxItem Content="  Ohms Law" Height="45" FontSize="32" Tap="OhmsNAv"/>
+            		<ListBoxItem Content="  Resistors" Height="45" FontSize="32" Tap="ResisDefNav"/>
+            		<ListBoxItem Content="  Capacitors" Height="45" FontSize="32" Tap="CapDefNav"/>
+            		<ListBoxItem Content="  Inductors" Height="45" FontSize="32" Tap="InductDef"/>
+            		<ListBoxItem Content="  Semi Conductor Devices" Height="45" FontSize="32" Tap="SCDefNav"/>
+            		<ListBoxItem Content="  " Height="45" FontSize="32"/>
+            	</ListBox>
+            </controls:PanoramaItem>
+ 
+            <!--Panorama item one-->
+            <controls:PanoramaItem Header="Calculators">
+                <!--Double line list with text wrapping-->
+                <ListBox Margin="0,0,-12,0">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Margin="0,0,0,17" Width="432" Height="78">
+                                <TextBlock Text="{Binding LineOne}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
+                                <TextBlock Text="{Binding LineTwo}" TextWrapping="Wrap" Margin="12,-6,12,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                	<ListBoxItem Content="  Ohms Law" Height="45" FontSize="32" Tap="GotoOhmsCal"/>
+                	<ListBoxItem Content="  Reactance Calculator" Height="45" FontSize="32" Tap="GotoReactanceCal"/>
+                	<ListBoxItem Content="  Resistor Color Code" Height="45" FontSize="32" Tap="GotoResistorCal"/>
+                	<ListBoxItem Content="  Inductor Color Code" Height="45" FontSize="32" Tap="gotoinduccal"/>
+                	<ListBoxItem Content="  SMD Resistor Code" Height="45" FontSize="32" Tap="gotoSMD"/>
+                	<ListBoxItem Content="  NE555 Timer Calculator" Height="45" FontSize="32" Tap="gotone555"/>
+                </ListBox>
+            </controls:PanoramaItem>
+ 
+            <!--Use 'Orientation="Horizontal"' to enable a panel that lays out horizontally-->
+            <controls:PanoramaItem Header="PINS">
+                <!--Double line list with image placeholder and text wrapping-->
+                <ListBox Margin="0,0,-12,0">
+                    <ListBox.ItemTemplate>
+                        <DataTemplate>
+                            <StackPanel Orientation="Horizontal" Margin="0,0,0,17">
+                                <!--Replace rectangle with image-->
+                                <Rectangle Height="100" Width="100" Fill="#FFE5001b" Margin="12,0,9,0"/>
+                                <StackPanel Width="311">                                    
+                                    <TextBlock Text="{Binding LineOne}" TextWrapping="Wrap" Style="{StaticResource PhoneTextExtraLargeStyle}"/>
+                                    <TextBlock Text="{Binding LineTwo}" TextWrapping="Wrap" Margin="12,-6,12,0" Style="{StaticResource PhoneTextSubtleStyle}"/>
+                                </StackPanel>
+                            </StackPanel>
+                        </DataTemplate>
+                    </ListBox.ItemTemplate>
+                	<ListBoxItem Content="  USB Pin Out" Height="45" FontSize="32" Tap="navusbpin"/>
+                	<ListBoxItem Content="  Serial Port Pin Out" Height="45" FontSize="32" Tap="navserialout"/>
+                	<ListBoxItem Content="  Parallel Port Pin Out" Height="45" FontSize="32" Tap="parallelpinout"/>
+                	<ListBoxItem Content="  Ethernet Port Pin Out" Height="45" FontSize="32" Tap="ethernetpinout"/>
+                </ListBox>
+            </controls:PanoramaItem>
+            <controls:PanoramaItem Header="Info">
+            	<Grid HorizontalAlignment="Left" Height="495" VerticalAlignment="Top" Width="420">
+            		<Rectangle Fill="#FF00C5FF" HorizontalAlignment="Left" Height="138" Margin="34,172,0,0" Stroke="Black" VerticalAlignment="Top" Width="144" Tap="reportbug"/>
+            		<TextBlock HorizontalAlignment="Left" Height="167" Margin="10,0,0,0" TextWrapping="Wrap" Text="Electronica is a project aimed to ease the living in an electronics world. The project was started for developing a handy reference for the electronics people. We will add new features in the future updates!" VerticalAlignment="Top" Width="344"/>
+            		<Rectangle Fill="#FF00C5FF" HorizontalAlignment="Left" Height="131" Margin="34,315,0,0" Stroke="Black" VerticalAlignment="Top" Width="293" Tap="ratereview"/>
+            		<Rectangle Fill="#FF00C5FF" HorizontalAlignment="Left" Height="138" Margin="183,172,0,0" Stroke="Black" VerticalAlignment="Top" Width="144" Tap="feedbackmail"/>
+            		<TextBlock HorizontalAlignment="Left" Height="35" Margin="40,274,0,0" TextWrapping="Wrap" Text="Report A Bug" VerticalAlignment="Top" Width="138" Tap="reportbugtxt"/>
+            		<TextBlock HorizontalAlignment="Left" Height="35" Margin="189,274,0,0" TextWrapping="Wrap" Text="Feedback" VerticalAlignment="Top" Width="138" Tap="feedtxt"/>
+            		<TextBlock HorizontalAlignment="Left" Height="35" Margin="40,408,0,0" TextWrapping="Wrap" Text="Give us a 5 star rating!" VerticalAlignment="Top" Width="286" Tap="fivestartxt"/>
+            		<Image Margin="58,185,266,228" Source="1194985428453820625bug_nicu_buculei_01.svg.med.png" Stretch="Fill" Tap="reportbugimage"/>
+            		<Image Margin="33,327,307,97" Source="Star-Full.png" Stretch="Fill" Tap="star1"/>
+            		<Image Margin="87,327,253,97" Source="Star-Full.png" Stretch="Fill" Tap="star2"/>
+            		<Image Margin="141,327,199,97" Source="Star-Full.png" Stretch="Fill" Tap="star3"/>
+            		<Image Margin="195,327,145,97" Source="Star-Full.png" Stretch="Fill" Tap="star5"/>
+            		<Image Margin="247,327,93,97" Source="Star-Full.png" Stretch="Fill" Tap="star4"/>
+            		<Image Margin="201,176,117,222" Source="ICON_feedback.png" Stretch="Fill" RenderTransformOrigin="0.949,0.69" Tap="feedimage"/>
+            	</Grid>
+            </controls:PanoramaItem>
+        </controls:Panorama>
+    </Grid>
+</phone:PhoneApplicationPage>

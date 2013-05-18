@@ -1,0 +1,93 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Electronica.VoltDef"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+   xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+            <toolkit:NavigationInTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardIn" />
+            </toolkit:NavigationInTransition.Backward>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardIn" />
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardOut" />
+            </toolkit:NavigationOutTransition.Backward>
+            <toolkit:NavigationOutTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardOut" />
+            </toolkit:NavigationOutTransition.Forward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="Electronica" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="Voltage" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+        	<ScrollViewer HorizontalAlignment="Left" Height="607" VerticalAlignment="Top" Width="456">
+        		<RichTextBox HorizontalAlignment="Left" Height="1578" VerticalAlignment="Top" Width="446" TextAlignment="Justify">
+        			<Paragraph>
+        				<Run Text="     "/>
+        				<Run Text="Voltage, otherwise known as electrical potential difference or electric tension (denoted ∆V and measured in units of electric potential: volts, or joules per coulomb), is the electric potential difference between two points — or the difference in electric potential energy of a unit test charge transported between two points.[1] Voltage is equal to the work which would have to be done, per unit charge, against a static electric field to move the charge between two points. A voltage may represent either a source of energy (electromotive force), or it may represent lost, used, or stored energy (potential drop). A voltmeter can be used to measure the voltage (or potential difference) between two points in a system; usually a common reference potential such as the ground of the system is used as one of the points. Voltage can be caused by static electric fields, by electric current through a magnetic field, by time-varying magnetic fields, or a combination of all three"/>
+        				<Run Text="  "/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run FontWeight="Bold" Text="Definition"/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run Text="     "/>
+        				<Run Text="The voltage between two ends of a path is the total energy required to move a small electric charge along that path, divided by the magnitude of the charge. Mathematically this is expressed as the line integral of the electric field and the time rate of change of magnetic field along that path. In the general case, both a static (unchanging) electric field and a dynamic (time-varying) electromagnetic field must be included in determining the voltage between two points."/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run Text="     "/>
+        				<Run Text="Historically this quantity has also been called &quot;tension&quot;[4] and &quot;pressure&quot;. Pressure is now obsolete but tension is still used, for example within the phrase &quot;high tension&quot; (HT) which is commonly used in thermionic valve (vacuum tube) based electronics."/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run Text="     "/>
+        				<Run Text="Voltage is defined so that negatively charged objects are pulled towards higher voltages, while positively charged objects are pulled towards lower voltages. Therefore, the conventional current in a wire or resistor always flows from higher voltage to lower voltage. Current can flow from lower voltage to higher voltage, but only when a source of energy is present to &quot;push&quot; it against the opposing electric field. For example, inside a battery, chemical reactions inside the battery provide the energy needed for current to flow from the negative to the positive terminal."/>
+        			</Paragraph>
+        		</RichTextBox>
+        	</ScrollViewer>
+
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

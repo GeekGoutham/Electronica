@@ -1,0 +1,114 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Electronica.ResistoDef"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+            <toolkit:NavigationInTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardIn" />
+            </toolkit:NavigationInTransition.Backward>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardIn" />
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardOut" />
+            </toolkit:NavigationOutTransition.Backward>
+            <toolkit:NavigationOutTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardOut" />
+            </toolkit:NavigationOutTransition.Forward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="Electronica" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="Resistors" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+        	<ScrollViewer HorizontalAlignment="Left" Height="607" VerticalAlignment="Top" Width="456">
+        		<RichTextBox HorizontalAlignment="Left" Height="2028" VerticalAlignment="Top" Width="446" TextAlignment="Justify">
+        			<Paragraph>
+        				<Run Text="     "/>
+        				<Run Text="A resistor is a passive two-terminal electrical component that implements electrical resistance as a circuit element."/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run Text="     "/>
+        				<Run Text="The current through a resistor is in direct proportion to the voltage across the resistor's terminals. This relationship is represented by Ohm's law"/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run Text="    I = "/>
+        				<Run Text="V / R"/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run Text="where I is the current through the conductor in units of amperes, V is the potential difference measured across the conductor in units of volts, and R is the resistance of the conductor in units of ohms."/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run Text="     "/>
+        				<Run Text="The ratio of the voltage applied across a resistor's terminals to the intensity of current in the circuit is called its resistance, and this can be assumed to be a constant (independent of the voltage) for ordinary resistors working within their ratings."/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run Text="     "/>
+        				<Run Text="Resistors are common elements of electrical networks and electronic circuits and are ubiquitous in electronic equipment. Practical resistors can be made of various compounds and films, as well as resistance wire (wire made of a high-resistivity alloy, such as nickel-chrome). Resistors are also implemented within integrated circuits, particularly analog devices, and can also be integrated into hybrid and printed circuits."/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run Text="     "/>
+        				<Run Text="The electrical functionality of a resistor is specified by its resistance: common commercial resistors are manufactured over a range of more than nine orders of magnitude. When specifying that resistance in an electronic design, the required precision of the resistance may require attention to the manufacturing tolerance of the chosen resistor, according to its specific application. The temperature coefficient of the resistance may also be of concern in some precision applications. Practical resistors are also specified as having a maximum power rating which must exceed the anticipated power dissipation of that resistor in a particular circuit: this is mainly of concern in power electronics applications. Resistors with higher power ratings are physically larger and may require heat sinks. In a high-voltage circuit, attention must sometimes be paid to the rated maximum working voltage of the resistor."/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run Text="     "/>
+        				<Run Text="Practical resistors have a series inductance and a small parallel capacitance; these specifications can be important in high-frequency applications. In a low-noise amplifier or pre-amp, the noise characteristics of a resistor may be an issue. The unwanted inductance, excess noise, and temperature coefficient are mainly dependent on the technology used in manufacturing the resistor. They are not normally specified individually for a particular family of resistors manufactured using a particular technology. A family of discrete resistors is also characterized according to its form factor, that is, the size of the device and the position of its leads (or terminals) which is relevant in the practical manufacturing of circuits using them"/>
+        				<Run Text="."/>
+        			</Paragraph>
+        		</RichTextBox>
+        	</ScrollViewer>
+
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>

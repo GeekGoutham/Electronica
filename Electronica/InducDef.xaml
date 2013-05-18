@@ -1,0 +1,93 @@
+﻿<phone:PhoneApplicationPage
+    x:Class="Electronica.InducDef"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:toolkit="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls.Toolkit"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait" Orientation="Portrait"
+    mc:Ignorable="d"
+    shell:SystemTray.IsVisible="True">
+
+    <toolkit:TransitionService.NavigationInTransition>
+        <toolkit:NavigationInTransition>
+            <toolkit:NavigationInTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardIn" />
+            </toolkit:NavigationInTransition.Backward>
+            <toolkit:NavigationInTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardIn" />
+            </toolkit:NavigationInTransition.Forward>
+        </toolkit:NavigationInTransition>
+    </toolkit:TransitionService.NavigationInTransition>
+    <toolkit:TransitionService.NavigationOutTransition>
+        <toolkit:NavigationOutTransition>
+            <toolkit:NavigationOutTransition.Backward>
+                <toolkit:TurnstileTransition Mode="BackwardOut" />
+            </toolkit:NavigationOutTransition.Backward>
+            <toolkit:NavigationOutTransition.Forward>
+                <toolkit:TurnstileTransition Mode="ForwardOut" />
+            </toolkit:NavigationOutTransition.Forward>
+        </toolkit:NavigationOutTransition>
+    </toolkit:TransitionService.NavigationOutTransition>
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--TitlePanel contains the name of the application and page title-->
+        <StackPanel Grid.Row="0" Margin="12,17,0,28">
+            <TextBlock Text="Electronica" Style="{StaticResource PhoneTextNormalStyle}"/>
+            <TextBlock Text="Inductors" Margin="9,-7,0,0" Style="{StaticResource PhoneTextTitle1Style}"/>
+        </StackPanel>
+
+        <!--ContentPanel - place additional content here-->
+        <Grid x:Name="ContentPanel" Grid.Row="1" Margin="12,0,12,0">
+        	<ScrollViewer HorizontalAlignment="Left" Height="607" VerticalAlignment="Top" Width="456">
+        		<RichTextBox HorizontalAlignment="Left" Height="1646" VerticalAlignment="Top" Width="446" TextAlignment="Justify">
+        			<Paragraph>
+        				<Run Text="     "/>
+        				<Run Text="An inductor (also choke, coil, or reactor) is a passive two-terminal electrical component that stores energy in its magnetic field. For comparison, a capacitor stores energy in an electric field, and a resistor does not store energy but rather dissipates energy as heat."/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run Text="     "/>
+        				<Run Text="Any conductor has inductance. An inductor is typically made of a wire or other conductor wound into a coil, to increase the magnetic field."/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run Text="     "/>
+        				<Run Text="When the current flowing through an inductor changes, a time-varying magnetic field is created inside the coil, and a voltage is induced, according to Faraday’s law of electromagnetic induction, which by Lenz's law opposes the change in current that created it. Inductors are one of the basic components used in electronics where current and voltage change with time, due to the ability of inductors to delay and reshape alternating currents"/>
+        				<Run Text="."/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run Text="Ideal and real inductors"/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run/>
+        			</Paragraph>
+        			<Paragraph>
+        				<Run Text="     "/>
+        				<Run Text="An &quot;ideal inductor&quot; has inductance, but no resistance or capacitance, and does not dissipate or radiate energy. However real inductors have resistance (due to the resistance of the wire and losses in core material), and parasitic capacitance (due to the electric field between the turns of wire which are at slightly different potentials). At high frequencies the capacitance begins to affect the inductor's behavior; at some frequency, real inductors behave as resonant circuits, becoming self-resonant. Above the resonant frequency the capacitive reactance becomes the dominant part of the impedance. Energy is dissipated by the resistance of the wire, and by any losses in the magnetic core due to hysteresis. At high currents, iron core inductors also show gradual departure from ideal behavior due to nonlinearity caused by magnetic saturation. At higher frequencies, resistance and resistive losses in inductors grow due to skin effect in the inductor's winding wires. Core losses also contribute to inductor losses at higher frequencies. Practical inductors work as antennas, radiating a part of energy processed into surrounding space and circuits, and accepting electromagnetic emissions from other circuits, taking part in electromagnetic interference. Circuits and materials close to the inductor will have near-field coupling to the inductor's magnetic field, which may cause additional energy loss. Real-world inductor applications may consider the parasitic parameters as important as the inductance."/>
+        			</Paragraph>
+        		</RichTextBox>
+        	</ScrollViewer>
+
+        </Grid>
+    </Grid>
+
+</phone:PhoneApplicationPage>
