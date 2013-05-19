@@ -292,7 +292,7 @@
     				<CompositeTransform Rotation="31.769"/>
     			</Ellipse.RenderTransform>
     		</Ellipse>
-    		<TextBlock HorizontalAlignment="Left" Height="41.503" Margin="-191.601,431.502,0,0" TextWrapping="Wrap" Text="Resistor Color Code" VerticalAlignment="Top" Width="424.524" FontSize="29.333" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Grid.Row="1" UseLayoutRounding="False" d:LayoutRounding="Auto">
+    		<TextBlock HorizontalAlignment="Left" Height="41.503" Margin="-191.601,431.502,0,0" TextWrapping="Wrap" Text="Resistor Color Code" VerticalAlignment="Top" Width="424.524" FontSize="29.333" RenderTransformOrigin="0.5,0.5" Grid.ColumnSpan="2" Grid.Row="1" UseLayoutRounding="False" d:LayoutRounding="Auto" Foreground="#DEFFFFFF">
     			<TextBlock.RenderTransform>
     				<CompositeTransform Rotation="-90.055"/>
     			</TextBlock.RenderTransform>
@@ -309,8 +309,8 @@
     				</LinearGradientBrush>
     			</Rectangle.Fill>
     		</Rectangle>
-    		<TextBlock x:Name="restxt1" HorizontalAlignment="Left" Height="75" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="269" FontSize="53.333" Grid.ColumnSpan="2"/>
-    		<TextBlock x:Name="restxttol" HorizontalAlignment="Left" Height="75" Margin="170,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" FontSize="53.333" Grid.Column="1"/>
+    		<TextBlock x:Name="restxt1" HorizontalAlignment="Left" Height="75" Margin="10,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="269" FontSize="53.333" Grid.ColumnSpan="2" Foreground="#DEFFFFFF"/>
+    		<TextBlock x:Name="restxttol" HorizontalAlignment="Left" Height="75" Margin="170,10,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="164" FontSize="53.333" Grid.Column="1" Foreground="#DEFFFFFF"/>
     		<TextBlock x:Name="restxttol_Copy" HorizontalAlignment="Left" Height="48" Margin="136,14,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="36" FontSize="40" Grid.Column="1" Text="+"/>
     		<TextBlock x:Name="restxttol_Copy1" HorizontalAlignment="Left" Height="48" Margin="142,35,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="36" FontSize="40" Grid.Column="1" Text="-"/>
     	</Grid>

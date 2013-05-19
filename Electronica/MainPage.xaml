@@ -43,7 +43,7 @@
     <Grid x:Name="LayoutRoot" Background="Transparent">
  
         <!--Panorama control-->
-        <controls:Panorama Title="Electronica" Loaded="ApplicationStarted">
+        <controls:Panorama Title="Electronica" Loaded="ApplicationStarted" Foreground="#DEFFFFFF">
             <controls:Panorama.Background>
                 <ImageBrush ImageSource="PanoramaBackground.png"/>
             </controls:Panorama.Background>
@@ -60,14 +60,14 @@
             				</StackPanel>
             			</DataTemplate>
             		</ListBox.ItemTemplate>
-            		<ListBoxItem x:Name="charge_list" Content="  Charge" Height="45" FontSize="32" Tap="LoadChargeDef"/>
-            		<ListBoxItem Content="  Voltage" Height="45" FontSize="32" Tap="VoltDefNav"/>
-            		<ListBoxItem Content="  Current" Height="45" FontSize="32" Tap="CurrentDefNAv"/>
-            		<ListBoxItem Content="  Ohms Law" Height="45" FontSize="32" Tap="OhmsNAv"/>
-            		<ListBoxItem Content="  Resistors" Height="45" FontSize="32" Tap="ResisDefNav"/>
-            		<ListBoxItem Content="  Capacitors" Height="45" FontSize="32" Tap="CapDefNav"/>
-            		<ListBoxItem Content="  Inductors" Height="45" FontSize="32" Tap="InductDef"/>
-            		<ListBoxItem Content="  Semi Conductor Devices" Height="45" FontSize="32" Tap="SCDefNav"/>
+            		<ListBoxItem x:Name="charge_list" Content="  Charge" Height="45" FontSize="32" Tap="LoadChargeDef" Foreground="#DEFFFFFF"/>
+            		<ListBoxItem Content="  Voltage" Height="45" FontSize="32" Tap="VoltDefNav" Foreground="#DEFFFFFF"/>
+            		<ListBoxItem Content="  Current" Height="45" FontSize="32" Tap="CurrentDefNAv" Foreground="#DEFFFFFF"/>
+            		<ListBoxItem Content="  Ohms Law" Height="45" FontSize="32" Tap="OhmsNAv" Foreground="#DEFFFFFF"/>
+            		<ListBoxItem Content="  Resistors" Height="45" FontSize="32" Tap="ResisDefNav" Foreground="#DEFFFFFF"/>
+            		<ListBoxItem Content="  Capacitors" Height="45" FontSize="32" Tap="CapDefNav" Foreground="#DEFFFFFF"/>
+            		<ListBoxItem Content="  Inductors" Height="45" FontSize="32" Tap="InductDef" Foreground="#DEFFFFFF"/>
+            		<ListBoxItem Content="  Semi Conductor Devices" Height="45" FontSize="32" Tap="SCDefNav" Foreground="#DEFFFFFF"/>
             		<ListBoxItem Content="  " Height="45" FontSize="32"/>
             	</ListBox>
             </controls:PanoramaItem>
@@ -84,12 +84,12 @@
                             </StackPanel>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
-                	<ListBoxItem Content="  Ohms Law" Height="45" FontSize="32" Tap="GotoOhmsCal"/>
-                	<ListBoxItem Content="  Reactance Calculator" Height="45" FontSize="32" Tap="GotoReactanceCal"/>
-                	<ListBoxItem Content="  Resistor Color Code" Height="45" FontSize="32" Tap="GotoResistorCal"/>
-                	<ListBoxItem Content="  Inductor Color Code" Height="45" FontSize="32" Tap="gotoinduccal"/>
-                	<ListBoxItem Content="  SMD Resistor Code" Height="45" FontSize="32" Tap="gotoSMD"/>
-                	<ListBoxItem Content="  NE555 Timer Calculator" Height="45" FontSize="32" Tap="gotone555"/>
+                	<ListBoxItem Content="  Ohms Law" Height="45" FontSize="32" Tap="GotoOhmsCal" Foreground="#DEFFFFFF"/>
+                	<ListBoxItem Content="  Reactance Calculator" Height="45" FontSize="32" Tap="GotoReactanceCal" Foreground="#DEFFFFFF"/>
+                	<ListBoxItem Content="  Resistor Color Code" Height="45" FontSize="32" Tap="GotoResistorCal" Foreground="#DEFFFFFF"/>
+                	<ListBoxItem Content="  Inductor Color Code" Height="45" FontSize="32" Tap="gotoinduccal" Foreground="#DEFFFFFF"/>
+                	<ListBoxItem Content="  SMD Resistor Code" Height="45" FontSize="32" Tap="gotoSMD" Foreground="#DEFFFFFF"/>
+                	<ListBoxItem Content="  NE555 Timer Calculator" Height="45" FontSize="32" Tap="gotone555" Foreground="#DEFFFFFF"/>
                 </ListBox>
             </controls:PanoramaItem>
  
@@ -109,10 +109,10 @@
                             </StackPanel>
                         </DataTemplate>
                     </ListBox.ItemTemplate>
-                	<ListBoxItem Content="  USB Pin Out" Height="45" FontSize="32" Tap="navusbpin"/>
-                	<ListBoxItem Content="  Serial Port Pin Out" Height="45" FontSize="32" Tap="navserialout"/>
-                	<ListBoxItem Content="  Parallel Port Pin Out" Height="45" FontSize="32" Tap="parallelpinout"/>
-                	<ListBoxItem Content="  Ethernet Port Pin Out" Height="45" FontSize="32" Tap="ethernetpinout"/>
+                	<ListBoxItem Content="  USB Pin Out" Height="45" FontSize="32" Tap="navusbpin" Foreground="#DEFFFFFF"/>
+                	<ListBoxItem Content="  Serial Port Pin Out" Height="45" FontSize="32" Tap="navserialout" Foreground="#DEFFFFFF"/>
+                	<ListBoxItem Content="  Parallel Port Pin Out" Height="45" FontSize="32" Tap="parallelpinout" Foreground="#DEFFFFFF"/>
+                	<ListBoxItem Content="  Ethernet Port Pin Out" Height="45" FontSize="32" Tap="ethernetpinout" Foreground="#DEFFFFFF"/>
                 </ListBox>
             </controls:PanoramaItem>
             <controls:PanoramaItem Header="Info">
